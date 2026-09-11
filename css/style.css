@@ -260,6 +260,34 @@ main {
   color: var(--ink-soft);
 }
 
+.amazon-block {
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--line);
+}
+
+.amazon-link {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.amazon-link:hover {
+  background: var(--accent-deep);
+}
+
+.amazon-disclosure {
+  margin: 0.5rem 0 0;
+  font-size: 0.72rem;
+  color: var(--mist);
+}
+
 .boards-compare {
   margin-bottom: 1.75rem;
 }

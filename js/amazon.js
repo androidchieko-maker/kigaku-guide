@@ -8,7 +8,7 @@
  * 3. 空文字のままだと、この機能は表示されない（安全のためのデフォルト）
  */
 window.KigakuAmazon = (function () {
-  const ASSOCIATE_TAG = "";
+  const ASSOCIATE_TAG = "kigakuguide0c-22";
 
   /** 本命星の五行（水・土・木・金・火）ごとのおすすめキーワード */
   const ITEM_BY_ELEMENT = {

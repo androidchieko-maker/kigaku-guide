@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>使い方・用語の説明 — 気学案内</title>
+    <meta
+      name="description"
+      content="気学案内（kigaku-guide）の使い方と、本命星・吉方・凶方などの用語をやさしく説明します。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <header class="hero">
+      <p class="brand">気学案内</p>
+      <h1>使い方・用語の説明</h1>
+      <p class="lead">
+        気学案内の見方と、出てくる言葉の意味をやさしくまとめました。
+      </p>
+    </header>
+
+    <main>
+      <section class="guide-section">
+        <h2 class="guide-heading">使い方</h2>
+        <ol class="guide-steps">
+          <li>「生年月日」に自分の生まれた日を入れる</li>
+          <li>「知りたい日付」に調べたい日（初期値は今日）を入れる</li>
+          <li>「案内を見る」を押すと、鑑定結果が表示される</li>
+        </ol>
+      </section>
+
+      <section class="guide-section">
+        <h2 class="guide-heading">鑑定結果の見方</h2>
+
+        <dl class="glossary">
+          <div class="glossary-item">
+            <dt>本命星</dt>
+            <dd>
+              生まれた年（立春を境に切り替わる）から決まる、九星気学での自分の星。生涯変わらない、いちばん基本になる星です。
+            </dd>
+          </div>
+          <div class="glossary-item">
+            <dt>月命星</dt>
+            <dd>生まれた月から決まる星。本命星を補う、もうひとつの自分の性質を表します。</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>日家九星</dt>
+            <dd>
+              調べたい「その日」に巡っている星。今日・明日など、日によって変わります。
+            </dd>
+          </div>
+          <div class="glossary-item">
+            <dt>年盤・月盤・日盤</dt>
+            <dd>
+              9つの星が8つの方位（＋中央）にどう配置されているかを表した図。それぞれ「その年」「その月」「その日」の配置で、南を上にして描いています。3つを見比べることで、方位の吉凶がどの期間から来ているものかが分かります。
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="guide-section">
+        <h2 class="guide-heading">吉方位ってなに？</h2>
+        <p class="guide-text">
+          「吉方」は、自分の本命星の気が巡っている方位で、行動を起こすのに良いとされる方角の目安です。結果画面の「吉方の目安」に出てくる方位の下にある「神社を探す」「カフェを探す」「公園を探す」ボタンを押すと、現在地からその方角に少し進んだ場所を、Googleマップで検索して開けます（現在地の利用を許可する必要があります）。
+        </p>
+      </section>
+
+      <section class="guide-section">
+        <h2 class="guide-heading">凶方・注意方位の種類</h2>
+        <p class="guide-text">
+          盤の中に小さく表示されるラベルの意味です。いずれも「その方角への大きな行動（引っ越し・旅行など）は控えめに」という目安を表します。
+        </p>
+
+        <dl class="glossary">
+          <div class="glossary-item">
+            <dt>五黄殺</dt>
+            <dd>中央にある五黄土星が実際に巡っている方位。もっとも注意したい方位とされます。</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>暗剣殺</dt>
+            <dd>五黄殺のちょうど反対側の方位。気づきにくい凶方とされます。</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>歳破・月破・日破</dt>
+            <dd>
+              その年・月・日を表す十二支の、ちょうど反対側の方位。長期の移動計画で意識すると安心とされます。
+            </dd>
+          </div>
+          <div class="glossary-item">
+            <dt>本命殺・本命的殺</dt>
+            <dd>
+              自分の本命星が巡っている方位（本命殺）と、その反対側の方位（本命的殺）。
+            </dd>
+          </div>
+          <div class="glossary-item">
+            <dt>月命殺・月命的殺</dt>
+            <dd>
+              自分の月命星が巡っている方位（月命殺）と、その反対側の方位（月命的殺）。
+            </dd>
+          </div>
+          <div class="glossary-item">
+            <dt>定位対冲</dt>
+            <dd>本命星がもともと配置されている方位の、反対側の方位。</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="guide-section">
+        <h2 class="guide-heading">今日の開運アイテムについて</h2>
+        <p class="guide-text">
+          本命星の五行（水・土・木・金・火）に合わせて、色つきのパワーストーンなどをAmazonで探せるリンクを表示しています。気になる方への参考としてお使いください。
+        </p>
+      </section>
+
+      <section class="guide-section">
+        <h2 class="guide-heading">計算の前提・注意</h2>
+        <ul class="guide-list">
+          <li>年の切り替わりは立春（目安：2月4日）を基準にしています</li>
+          <li>月の切り替わりは二十四節気の目安日を使っています</li>
+          <li>節の境目付近に生まれた方・調べる日が節目に近い場合、他の情報源と1日ずれることがあります</li>
+          <li>気学は伝統的な方位の考え方にもとづく参考情報であり、科学的な断定ではありません</li>
+        </ul>
+      </section>
+
+      <p class="guide-back"><a href="index.html">← 気学案内トップへ戻る</a></p>
+    </main>
+
+    <footer class="footer">
+      <p>気学案内（kigaku-guide）— 日々の参考としてお使いください</p>
+    </footer>
+  </body>
+</html>

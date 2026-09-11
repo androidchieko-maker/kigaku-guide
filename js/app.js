@@ -170,11 +170,29 @@
     root.appendChild(ring);
   }
 
+  /** 開運アイテム（Amazonアソシエイト）を反映 */
+  function renderAmazon(element) {
+    const block = document.getElementById("amazon-block");
+    const amazon = window.KigakuAmazon;
+    const item = amazon && amazon.isEnabled() ? amazon.itemFor(element) : null;
+
+    if (!item) {
+      block.hidden = true;
+      return;
+    }
+
+    document.getElementById("amazon-item-label").textContent =
+      `${item.color}のパワーストーン`;
+    document.getElementById("amazon-link").href = amazon.searchUrl(item.keyword);
+    block.hidden = false;
+  }
+
   /** 結果を画面に反映 */
   function renderResult(data) {
     document.getElementById("honmei-name").textContent = data.honmei.name;
     document.getElementById("honmei-desc").textContent = data.honmei.short;
     document.getElementById("getsumei-name").textContent = data.getsumei.name;
+    renderAmazon(data.honmei.element);
 
     document.getElementById("day-star").textContent =
       `日家九星：${data.target.dayStar.name}`;

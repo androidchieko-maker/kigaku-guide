@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>気学案内 — 本命星と吉方・凶方</title>
+    <meta
+      name="description"
+      content="生年月日から本命星を調べ、指定した日の吉方・凶方を案内します。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <header class="hero">
+      <p class="brand">気学案内</p>
+      <h1>本命星と、その日の吉方・凶方</h1>
+      <p class="lead">
+        生年月日と知りたい日付を入れると、九星気学にもとづく案内を表示します。
+      </p>
+    </header>
+
+    <main>
+      <form id="kigaku-form" class="form" novalidate>
+        <div class="field">
+          <label for="birth">生年月日</label>
+          <input type="date" id="birth" name="birth" required />
+        </div>
+        <div class="field">
+          <label for="target">知りたい日付</label>
+          <input type="date" id="target" name="target" required />
+        </div>
+        <button type="submit" class="submit">案内を見る</button>
+      </form>
+
+      <p id="form-error" class="form-error" hidden></p>
+
+      <section id="result" class="result" hidden aria-live="polite">
+        <h2 class="result-heading">鑑定結果</h2>
+
+        <div class="honmei-block">
+          <p class="label">あなたの本命星</p>
+          <p id="honmei-name" class="honmei-name"></p>
+          <p id="honmei-desc" class="desc"></p>
+          <p class="label getsumei-label">月命星</p>
+          <p id="getsumei-name" class="getsumei-name"></p>
+        </div>
+
+        <div class="day-block">
+          <p class="label">指定日の気</p>
+          <p id="day-star" class="day-star"></p>
+          <p id="day-desc" class="desc"></p>
+        </div>
+
+        <div class="boards-compare">
+          <p class="board-hint boards-hint">南が上の八方位盤です。横に並べて見比べられます</p>
+          <div class="boards-row">
+            <article class="board-panel" id="year-board-panel">
+              <header class="board-panel-head">
+                <h3 class="board-kind">年盤</h3>
+                <p id="year-board-title" class="board-title"></p>
+                <p id="year-board-range" class="board-range"></p>
+              </header>
+              <div id="year-board" class="octagon" aria-label="年盤"></div>
+            </article>
+            <article class="board-panel" id="month-board-panel">
+              <header class="board-panel-head">
+                <h3 class="board-kind">月盤</h3>
+                <p id="month-board-title" class="board-title"></p>
+                <p id="month-board-range" class="board-range"></p>
+              </header>
+              <div id="month-board" class="octagon" aria-label="月盤"></div>
+            </article>
+            <article class="board-panel" id="day-board-panel">
+              <header class="board-panel-head">
+                <h3 class="board-kind">日盤</h3>
+                <p id="day-board-title" class="board-title"></p>
+                <p id="day-board-range" class="board-range"></p>
+              </header>
+              <div id="day-board" class="octagon" aria-label="日盤"></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="dirs">
+          <div class="dir-col lucky-col">
+            <h3>吉方の目安</h3>
+            <ul id="lucky-list"></ul>
+          </div>
+          <div class="dir-col unlucky-col">
+            <h3>凶方・注意方位</h3>
+            <ul id="unlucky-list"></ul>
+          </div>
+        </div>
+
+        <ul id="notes" class="notes"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>気学案内（kigaku-guide）— 日々の参考としてお使いください</p>
+    </footer>
+
+    <script src="js/kigaku.js"></script>
+    <script src="js/spot.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
